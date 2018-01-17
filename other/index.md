@@ -16,7 +16,7 @@
 
 8. introducting `java`, (or `AI`)
 
-9. publist an article everyday
+9. publish an article everyday
 
 ~
 
