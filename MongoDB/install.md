@@ -9,7 +9,7 @@
 
 直接下载msi安装
 
-[_](https://github.com/Heisinadaze/mynotes/blob/master/MongoDB/1.png)
+![_](https://github.com/Heisinadaze/mynotes/blob/master/MongoDB/1.png)
 
 自定义安装目录
 
@@ -24,7 +24,7 @@ mongod --dbpath c:\data\db
 ```
 成功会显示
 
-[_](https://github.com/Heisinadaze/mynotes/blob/master/MongoDB/2.png)
+![_](https://github.com/Heisinadaze/mynotes/blob/master/MongoDB/2.png)
 
 打开一个新的命令行
 
