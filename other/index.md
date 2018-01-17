@@ -18,6 +18,8 @@
 
 9. publish an article everyday
 
+10. Save money for Get driver's license
+
 ~
 
 ~
