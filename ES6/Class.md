@@ -180,7 +180,7 @@ inst.prop
         }
       }
 
-      Foo.baz(); // 'hello'
+      Foo.bar(); // 'hello'
 ```
 
 父类的静态方法，可以被子类继承。
