@@ -9,7 +9,7 @@
 
 2. 在该项目`package.json`中删除`"node-sass": 5.4.3`,即`npm install`时不安装这个包
 
-3. npm install
+3. npm install, 把`/node_modules/*`下5个文件放进去
 
 4. cnpm install --save-dev node-sass
 
