@@ -1,0 +1,33 @@
+实现一个基本功能
+
+![画图](http://upload-images.jianshu.io/upload_images/2941543-8098f4917c0cc9ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+点击li切换头像，把li中的信息传递到头部
+```
+<script>
+    export default {
+        data() {
+            return {
+                data: {}
+            }
+        },
+        methods: {
+          fetchDate() {
+          //this.$http.get()
+          ......
+          }
+         },
+         created() {
+           this.fetchDate();
+         },
+         watch: {
+           // 如果路由有变化，会调用该函数
+           "$route": "fetchDate"
+         }
+    }
+</script>
+```
+
+
+
+![实例](http://upload-images.jianshu.io/upload_images/2941543-a9fa9ecc5efa4109.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
