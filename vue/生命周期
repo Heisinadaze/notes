@@ -1,0 +1,3 @@
+
+![生命周期](http://upload-images.jianshu.io/upload_images/2941543-b9b05fd97d562bd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+beforeCreate : 数据观测，事件配置之前调用。（也就是在实例的 data, computed, watch, method等之前调用）
