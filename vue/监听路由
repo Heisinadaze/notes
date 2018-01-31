@@ -31,3 +31,18 @@
 
 
 ![实例](http://upload-images.jianshu.io/upload_images/2941543-a9fa9ecc5efa4109.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#传参
+
+在要实现点击跳转的页面
+```
+this.$router.push({path: '/personal/default', query: {id: 'id'}})
+```
+
+在路由页面
+```
+create () {
+    let id =  this.$route.query.id
+    console.log(id)
+}
+```
