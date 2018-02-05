@@ -1,0 +1,22 @@
+在store/action.js
+
+router.replace(url)
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/2941543-3085335c7dad19de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+layout/app.vue
+
+
+![image.png](http://upload-images.jianshu.io/upload_images/2941543-dbddd9a1644b94ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+
+不做初始化的页面中，可以直接在app.vue 中
+
+![image.png](http://upload-images.jianshu.io/upload_images/2941543-e434d69d2168c3a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
