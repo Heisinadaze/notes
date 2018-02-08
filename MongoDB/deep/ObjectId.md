@@ -29,13 +29,38 @@ new ObjectId().str
 
 
 
+# 自动增长
+
+1. 创建一个counters集合，
+`db.createCollection("counters")`
+
+2. 向counters中插入数据，使productid作为key
+`db.counters.insert({_id:"productid",sequence_value:0})`
+
+3. 创建一个Javascript函数
+```
+function getNextSequenceValue(sequenceName){
+   var sequenceDocument = db.counters.findAndModify(
+      {
+         query:{_id: sequenceName },
+         update: {$inc:{sequence_value:1}},
+         new:true
+      });
+   return sequenceDocument.sequence_value;
+}
+```
+
+4. 使用getNextSequenceValue函数创建新文档
+```
+db.products.insert({
+   "_id":getNextSequenceValue("productid"),
+   "product_name":"Apple iPhone",
+   "category":"mobiles"})
+```
+
+5. 查看
+`db.products.find()`
 
 
-
-
-
-
-
-
-
+![_](https://github.com/Heisinadaze/mynotes/blob/master/MongoDB/id++.png)
 
