@@ -20,6 +20,29 @@ let fn = (arr: string[], callback: (ind: number) => string[] ) => {
  */
 
  class Animal {
-   
+   protected name: string
+
+   constructor (name: string) {
+     this.name = name
+   }
+
+   public getName () {
+     return this.name
+   }
+
  }
+
+ class Dog extends Animal {
+   private height: number
+
+   constructor (name: string, height: number) {
+     super(name)
+     this.height = height
+   }
+ }
+
+ const animal = new Animal('dog')
+ const dog = new Dog('d', 5)
+ console.log(animal.getName())
+ console.log(dog.getName)
 
