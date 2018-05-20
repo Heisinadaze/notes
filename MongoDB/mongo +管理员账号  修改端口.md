@@ -43,6 +43,3 @@ mongo 管理员账号有两种，一种是admin用户（可以给所有的数据
 |dbAdminAnyDatabase：|只在admin数据库中可用，赋予用户所有数据库的dbAdmin权限。|
 |root：|只在admin数据库中可用。超级账号，超级权限|
 |backup、restore| 备份恢复 |
-
-
-
