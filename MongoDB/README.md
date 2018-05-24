@@ -1,1 +1,1 @@
-mongod --dbpath d:\data\db --auth
+mongod --port 1994 --dbpath d:\data\db --auth
