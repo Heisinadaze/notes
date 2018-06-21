@@ -16,6 +16,7 @@ npm i -global ***
 * sudo passwd root
 
 重置管理员密码
+![输入](https://github.com/Heisinadaze/notes/blob/master/mac/WechatIMG1.jpeg)
 
 
 然后重新`npm i -g`
