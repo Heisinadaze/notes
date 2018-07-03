@@ -1,6 +1,9 @@
 
 全局安装3.0.0版本
 
+> 推荐使用yarn ==> `npm i -g yarn`
+> 使用yarn install 
+
 ```
 npm install -g @vue/cli
 ```
@@ -18,11 +21,4 @@ vue create project
 ![vue@3.0.0](https://github.com/Heisinadaze/notes/blob/master/images/WechatIMG52.jpeg)
 
 一顿回车
-
-```
-
-
-
-
-```
 
