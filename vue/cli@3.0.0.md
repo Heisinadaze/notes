@@ -20,5 +20,7 @@ vue create project
 
 ![vue@3.0.0](https://github.com/Heisinadaze/notes/blob/master/images/WechatIMG52.jpeg)
 
-一顿回车
+除了单元测试，都选上了
+
+然后一顿回车
 
