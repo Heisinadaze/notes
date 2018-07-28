@@ -106,6 +106,10 @@ io.on('connection', function(socket) {
       console.log('链接失败')
       console.log(event.code)
       console.log(event)
+      let _this = this
+      setTimeout(() => {
+        _this.initWebSocket()
+      }, 1000)
     }
 ```
 
