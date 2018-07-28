@@ -81,6 +81,60 @@ io.on('connection', function(socket) {
 
 
 
+#### 三、websocket
+
+使用H5自带的websocket。
+
+```
+    var host = window.location.host
+    if (location.protocol === 'https:') {
+      var server = 'wss://' + host + '/wss'
+    } else {
+      var server = 'ws://' + host + '/wss'
+    }
+    console.log(server)
+    this.websock = new WebSocket(server)
+    socket.onopen = function (event) {
+      console.log('已连接')
+      socket.send('来自服务端的消息')
+    };
+    socket.onmessage = function (event) {
+      console.log('收到消息')
+      console.log(event.data)
+    }
+    socket.onclose = function (event) {
+      console.log('链接失败')
+      console.log(event.code)
+      console.log(event)
+    }
+```
+
+###### 实现断开重连机制
+
+[git地址](https://github.com/joewalnes/reconnecting-websocket)
+
+```
+cnpm i reconnecting-websocket
+
+把上面的new WebSocket()
+替换成
+new ReconnectingWebSocket('ws://....')
+
+正常使用默认的参数就可以了
+```
+
+* 遇到问题
+![socket](https://upload-images.jianshu.io/upload_images/2941543-e5d3fac7e0998e71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+链接关闭，event.code = 1006;
+在固定时间内没有通信 就会自动断开`TCP`链接
+
+在`nginx`中设置
+```
+proxy_read_timeout: 默认60s;
+```
+
+
 
 
 
