@@ -125,6 +125,12 @@ edit `package.json`
 }
 ```
 
+edit `index.html`
+
+```
+  <script src="./dll/vendor.dll.js"></script>
+```
+
 `npm run dll`
 
 `npm run build`
