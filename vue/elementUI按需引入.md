@@ -7,33 +7,26 @@ import {
     Col,
     Button,
     Input, 
-    Select, 
-    Carousel,
-    CarouselItem,
-    Collapse,
-    CollapseItem,
     Dialog,
-    Progress,
-    Card, 
+    Form,
+    FormItem,
+    Loading,
+    Checkbox,
+    Tooltip
 } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
-
 
 export default function elementui() {
     Vue.use(Row);
     Vue.use(Col);
     Vue.use(Input);
     Vue.use(Button);
-    Vue.use(Select);
-    Vue.use(Carousel);
-    Vue.use(CarouselItem);
-    Vue.use(Collapse);
-    Vue.use(CollapseItem);
     Vue.use(Dialog);
-    Vue.use(Progress);
-    Vue.use(Card);
-
+    Vue.use(Form);
+    Vue.use(FormItem);
+    Vue.use(Loading);
+    Vue.use(Checkbox);
+    Vue.use(Tooltip);
 }
 ```
 
