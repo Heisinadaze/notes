@@ -1,5 +1,7 @@
 
-new `webpack.dll// const path = require("path");
+new `webpack.dll.conf.js`
+```
+// const path = require("path");
 // const webpack = require("webpack");
 // const pkg = require('../package.json'); // 引入package.json
 // module.exports = {
@@ -49,7 +51,7 @@ module.exports = {
         new CleanWebpackPlugin(['dll'])
     ]
 }
-.conf.js`
+```
 
 ```
 // const path = require("path");
