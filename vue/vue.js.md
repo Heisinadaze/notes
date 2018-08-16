@@ -2,6 +2,8 @@ vue2.0基本用法
 
 (npm run dev)
 
+`vue init webpack demo`
+
 和angular有许多类似的地方，由于使用了大量ES6语法，所以不支持IE8以下版本
 
 ### 一、基本语法
