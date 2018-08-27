@@ -38,3 +38,5 @@ exports.EMAIL = {
   pass: 'yepysltxxdcrfeab',
   recipient: '18410079323@163.com'
 }
+
+// 同级 key pem
