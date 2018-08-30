@@ -3,8 +3,8 @@
 #### 引入
 ```
 import echarts from 'echarts'
-import 'echarts-gl'
-import SimplexNoise from 'simplex-noise'
+import 'echarts-gl' // 引入3d
+import SimplexNoise from 'simplex-noise' // A fast simplex noise implementation in Javascript.
 import html2canvas from 'html2canvas'
 ```
 
