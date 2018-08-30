@@ -1,4 +1,4 @@
-![bar3D](https://upload-images.jianshu.io/upload_images/2941543-834e58975163f94a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![bar3D](http://p5k2est0u.bkt.clouddn.com/bar3D2.png)
 
 #### 引入
 ```
@@ -155,7 +155,7 @@ import html2canvas from 'html2canvas'
     this.drawCharts()
   }
 ```
-![bar3D](https://upload-images.jianshu.io/upload_images/2941543-35fe0a29ca1746cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![bar3D](http://p5k2est0u.bkt.clouddn.com/bar3D1.png)
 
 
 
