@@ -81,4 +81,12 @@ web3.eth.defaultAccount = '0x0d97b58930abdc14ac8c2aa80ab8e82928c6def1';
 
 [git地址](https://github.com/ethereum/web3.js/tree/master)
 
+[网页查询交易信息](https://ropsten.etherscan.io/tx/)
+`https://ropsten.etherscan.io/tx/`
+
+测试环境数据（0x7bcc6bf0efe54b3aa4d87a025625c1f5e2ef67771e316844d2c6e4b8eacd6920）
+
+正式环境数据(0x54b51a36760ea922e0d4e9f96c0db1d70d1758bcefa9dbcac5101aaed544b86d)
+
+
 
