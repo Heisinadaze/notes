@@ -75,7 +75,8 @@ web3.eth.defaultAccount = '0x0d97b58930abdc14ac8c2aa80ab8e82928c6def1';
 
 
 
-[中文文档地址](http://cw.hubwiz.com/card/c/web3.js-1.0/1/2/19/)
+[中文文档地址 - 推荐](http://cw.hubwiz.com/card/c/web3.js-1.0/1/2/19/)
+[api - 不完整](http://web3.tryblockchain.org/)
 
 [git地址](https://github.com/ethereum/web3.js/tree/master)
 
