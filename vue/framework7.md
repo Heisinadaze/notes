@@ -59,3 +59,5 @@ new Vue({
 如`<a class="link external" href="http://google.com">Open Google</a>`;
 
 ....
+
+[官方文档](http://www.framework7.cn/docs/introduction.html)
