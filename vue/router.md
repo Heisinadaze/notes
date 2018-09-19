@@ -34,4 +34,6 @@
 {
   path: '/page/:id?'
 }
+
+this.$route.params.id
 ```
