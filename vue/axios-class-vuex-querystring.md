@@ -93,6 +93,10 @@ computed: mapState({
         return state.count + this.localCount
     }
 })
+
+computed: {
+    ...mapState(['count'])
+}
 ```
 getters 从store中的state中派生出一些状态；Getters 接受 state 作为其第一个参数
 
@@ -133,6 +137,23 @@ const store = new Vuex.Store({
 需要以相应的 type 调用 store.commit 方法
 ```
 store.commit('increment')
+```
+
+`mapActions`
+
+```
+import { mapActions } from 'vuex'
+
+export default {
+  // ...
+  methods: {
+    ...mapActions([
+      'doneTodosCount',
+      'anotherGetter',
+      // ...
+    ])
+  }
+}
 ```
 
 
