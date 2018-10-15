@@ -139,6 +139,23 @@ const store = new Vuex.Store({
 store.commit('increment')
 ```
 
+```
+import { mapMatations } from 'vuex'
+
+export default {
+  // ...
+  methods: {
+      
+    ...mapMatations({
+        add: addAction
+    })
+  }
+}
+
+传值的时候
+<p @click="add(传值)">点击</p>
+```
+
 `mapActions`
 
 ```
@@ -147,11 +164,10 @@ import { mapActions } from 'vuex'
 export default {
   // ...
   methods: {
-    ...mapActions([
-      'doneTodosCount',
-      'anotherGetter',
-      // ...
-    ])
+      
+    ...mapActions({
+        add: addAction
+    })
   }
 }
 ```
