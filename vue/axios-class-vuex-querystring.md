@@ -32,6 +32,117 @@
         console.log(res)
     })
 ```
+```
+axios({
+    methods: 'get',
+    url: '/fkasldf'
+})
+.then(res => {
+    console.log(res)
+})
+.catch(res => {
+    console.log(res)
+})
+```
+
+```
+axios.post('url', {
+    params: '123'
+})
+.then(res => {
+    console.log(res)
+})
+.catch(res => {
+    console.log(res)
+})
+```
+**配置**
+
+```
+import axios from 'axios'
+import queryString from 'queryString'
+
+var ax = axios.create({
+    baseUrl: 'http://..',
+    timeout: 1000,
+    headers: {},
+    responseType: 'json',
+    params: {},
+    transformRequest: [function (data) {
+        // 发送的数据进行转换
+        return queryString.stringify(data)
+    }],
+    transformResponse: [function (data) {
+        // 返回的数据进行转换
+        return data
+    }],
+    validateStatus (status) {
+        // 判断返回的状态码返回boolean
+    },
+    cancelToken // 取消用户请求
+})
+
+ax.get('/abc')
+```
+
+**发送多个请求**
+
+```
+function http1 () {
+    return ax.get('/abc')
+}
+functin http2 () {
+    return ax.post('bck')
+}
+axios.all([http1(), http2()])
+.then(res => {
+    console.log(res)
+})
+.catch(res => {
+    console.log(res)
+})
+```
+
+```
+function http1 () {
+    return ax.get('/abc')
+}
+functin http2 () {
+    return ax.post('bck')
+}
+axios.all([http1(), http2()])
+.then(axios.spread((res1, res2) => {
+    console.log(res1)
+}))
+.catch(res => {
+    console.log(res)
+})
+```
+
+**拦截器**
+1 请求拦截
+
+```
+axios.interceptors.request.use((config) => {
+    // 发送请求之前操作
+    console.log(config)
+    return config
+}, function (error) => {
+    // 请求错误
+    return Promise.reject(error)
+})
+```
+
+2 响应拦截
+
+```
+axios.interceptors.response.use((data) => {
+    // 发送请求之前操作
+    console.log(data)
+    return data
+})
+```
+
 > ${}   里面放变量
 
 二、动态添加class
