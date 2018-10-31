@@ -58,6 +58,103 @@ app.use(logger);
 
 如果没有`next()`就不会往下传递。
 
-3.4
+
+4. 合并中间件`koa-compose`
+
+```
+const compose = require('koa-compose');
+
+
+const middlewares = componse(['main, one, two']);
+app.use(middlewares);
+```
+
+5. 返回提示
+
+```
+// 500
+const err = ctx => {
+  ctx.throw(500);
+}
+
+// 404
+ctx.response.status = 404;
+```
+
+6. 中间件的错误解决
+
+```
+const handler = async (ctx, next) => {
+  try {
+    await next();
+  } catch (e) {
+    ctx.response.status = e.statusCode || e.status || 500;
+    ctx.response.body = {
+      message: e.message
+    };
+  }
+}
+```
+
+7. error事件监听
+
+```
+app.on('error', (err, ctx) => {
+  console.log('server error', err)
+})
+```
+
+8. 使用`try catch`解决报错就不会触发7error事件监听
+
+```
+// catch 最下面一行加
+ctx.app.emit('error', err, ctx);
+```
+
+9. 读写`cookie`
+
+```
+const main = function(ctx) {
+  const n = Number(ctx.cookies.get('view') || 0) + 1;
+  ctx.cookies.set('view', n);
+  ctx.response.body = n + ' views';
+}
+```
+
+10. 接收`post`请求参数 `koa-body`
+
+```
+const koaBody = require('koa-body');
+
+app.use(koaBody());
+
+const main = async ctx => {
+  const body = ctx.request.body;
+  console.log(body);
+  if (!body.name) ctx.throw(400, 'name is required');
+  ctx.body = { name: body.name }
+}
+```
+
+> 谷歌插件`request Maker`发送post请求，
+
+```
+http://127.0.0.1:3000
+
+content-type: application/x-www-form-urlencoded; charset=utf-8
+
+name: abc123
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
