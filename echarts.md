@@ -52,6 +52,9 @@
   
 ```
 
+**Question 5： GL**
+
+http://echarts.baidu.com/examples/editor.html?c=bar3d-simplex-noise&gl=1&theme=dark
 
 
 
