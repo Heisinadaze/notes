@@ -1,6 +1,8 @@
 
 全局安装3.0.0版本
 
+**需要node版本大于9.0**
+
 > 推荐使用yarn ==> `npm i -g yarn`
 > 使用yarn install 
 
