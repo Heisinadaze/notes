@@ -26,3 +26,20 @@ vue create project
 
 后面的根据自己的需求进行回车选择
 
+
+#### 遇到问题
+
+1. 版本更新问题
+
+> 在安装最新`node@10.14.1`时，npm没有安装成最新版本，导致报错
+
+![question 1](http://cdn.jsan.top//vue-cli@3/4fbe6ae8a58eb132537e902d54f6843.png)
+
+**解决**
+
+```
+npm uninstall npm -g
+
+重新安一遍node
+```
+
