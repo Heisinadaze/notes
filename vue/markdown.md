@@ -34,3 +34,17 @@ data () {
 }
 ```
 
+# vue3.0
+
+`/node_modules/@vue/cli-service/lib/config/base.js`
+
+```
+    webpackConfig.module
+      .rule('md')
+        .use('html-loader')
+          .loader('html-loader')
+          .end()
+        .use('markdown-loader')
+          .loader('markdown-loader')
+```
+
