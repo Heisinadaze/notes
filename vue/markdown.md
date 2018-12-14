@@ -25,7 +25,7 @@
 
 3. 引入
 
-```
+``` js
 import md from './abc.md'
 data () {
   return {
@@ -38,7 +38,7 @@ data () {
 
 `/node_modules/@vue/cli-service/lib/config/base.js`
 
-```
+``` js
     webpackConfig.module
       .rule('md')
         .use('html-loader')
