@@ -41,6 +41,7 @@ data () {
 ``` js
     webpackConfig.module
       .rule('md')
+        .test(/\.md$/)
         .use('html-loader')
           .loader('html-loader')
           .end()
