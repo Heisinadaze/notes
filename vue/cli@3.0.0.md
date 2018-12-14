@@ -51,6 +51,7 @@ npm uninstall npm -g
 
 ```
 可能是tsconfig.json加载失败
+node 不是可用命令
 
 npm i @types/node --save-dev
 ```
