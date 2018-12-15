@@ -1,16 +1,33 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, { ActionTree, MutationTree } from 'vuex';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
+interface State {
+  list: object;
+  treeList: any[];
+}
 
+const state: State = {
+  list: {},
+  treeList: []
+};
+
+const actions: ActionTree<State, any> = {
+
+};
+
+const mutations: MutationTree<State> = {
+  LIST (state, data) {
+    state.list = data;
   },
-  mutations: {
-
-  },
-  actions: {
-
+  TREELIST (state, data) {
+    state.treeList = data;
   }
+};
+
+export default new Vuex.Store({
+  state,
+  actions,
+  mutations
 });

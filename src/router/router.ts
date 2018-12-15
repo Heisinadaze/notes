@@ -5,12 +5,18 @@ import 'nprogress/nprogress.css';
 
 Vue.use(Router);
 
+const welcome = () => import('@/pages/welcome.vue');
 const home = () => import('@/pages/home.vue');
 const nofind = () => import('@/pages/404.vue');
 
 const routes: RouteConfig[] = [
   {
     path: '/',
+    name: 'welcome',
+    component: welcome
+  },
+  {
+    path: '/home',
     name: 'home',
     component: home
   },
