@@ -2,7 +2,17 @@
   <div class="home">
     <!-- 首页 -->
 
-    Welcome
+    <el-container class="type">
+      <el-aside width="200px">
+        <heads></heads>
+      </el-aside>
+      <el-main>
+        <transition name="el-zoom-in-top">
+          <router-view></router-view>
+        </transition>
+      </el-main>
+    </el-container>
+
   </div>
 </template>
 
@@ -12,11 +22,16 @@ import {
   Vue
 } from 'vue-property-decorator';
 import noImg from '@/assets/images/no-image.png';
+import heads from '@/components/head.vue';
 
-@Component
+@Component({
+  components: {
+    heads
+  }
+})
 export default class Home extends Vue {
-  private get list () {
-    return this.$store.state.list;
+  private get treeList () {
+    return this.$store.state.treeList;
   }
 
   private created () {
@@ -28,7 +43,18 @@ export default class Home extends Vue {
 <style lang="scss" scoped>
   .home {
     height: 100%;
+    overflow: hidden;
     padding: 0.5 * $width;
-    background: $white;
+    background: url(../assets/images/bg1.jpg) no-repeat center $white;
+    background-size: cover;
+
+    .el-aside {
+      width: auto !important;
+    }
+
+    .type {
+      margin: 0 auto;
+      max-width: 1500px;
+    }
   }
 </style>

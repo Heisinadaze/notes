@@ -7,6 +7,9 @@ Vue.use(Router);
 
 const welcome = () => import('@/pages/welcome.vue');
 const home = () => import('@/pages/home.vue');
+const index = () => import('@/pages/index.vue');
+const artList = () => import('@/pages/artList.vue');
+const article = () => import('@/pages/article.vue');
 const nofind = () => import('@/pages/404.vue');
 
 const routes: RouteConfig[] = [
@@ -18,7 +21,25 @@ const routes: RouteConfig[] = [
   {
     path: '/home',
     name: 'home',
-    component: home
+    component: home,
+    redirect: '/index',
+    children: [
+      {
+        path: '/index',
+        name: '首页',
+        component: index
+      },
+      {
+        path: '/artlist',
+        name: '列表',
+        component: artList
+      },
+      {
+        path: '/article',
+        name: '详情',
+        component: article
+      }
+    ]
   },
   {
     path: '*',
