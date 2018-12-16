@@ -22,7 +22,7 @@
         },
 ```
 
-**Question 2： 修改标题**
+**Question 3： 修改标题**
 
 ```
         title: {
@@ -30,7 +30,7 @@
         },
 ```
 
-**Question 3： x轴 是否从起始位置开始**
+**Question 4： x轴 是否从起始位置开始**
 
 ```
     xAxis: {
@@ -38,7 +38,7 @@
     },
 ```
 
-**Question 4： 多条线名称**
+**Question 5： 多条线名称**
 
 图例组件展现了不同系列的标记，颜色和名字。可以通过点击图例控制哪些系列不显示。
 
@@ -52,7 +52,7 @@
   
 ```
 
-**Question 5： GL**
+**Question 6： GL**
 
 http://echarts.baidu.com/examples/editor.html?c=bar3d-simplex-noise&gl=1&theme=dark
 
