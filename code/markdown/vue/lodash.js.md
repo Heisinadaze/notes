@@ -1,4 +1,4 @@
-
+```
 const _ = {}
 
 // Similar to ES6's rest param (http://ariya.ofilabs.com/2013/03/es6-and-rest-parameter.html)
@@ -119,3 +119,5 @@ _.throttle = function (func, wait, options) {
 }
 
 module.exports = _
+
+```
