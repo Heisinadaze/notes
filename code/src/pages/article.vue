@@ -31,16 +31,21 @@ export default class Article extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .article {
     padding: $width;
     height: calc(100vh - 50px);
     overflow: auto;
     background: $trans;
     font-size: 16px;
+    font-family: sans-serif;
 
     .no-content {
       line-height: 112px;
+    }
+
+    ol {
+      list-style:lower-alpha inside;
     }
   }
 </style>

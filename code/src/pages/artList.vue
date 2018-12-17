@@ -40,6 +40,12 @@ export default class ArtList extends Vue {
   private route (item: any) {
     if (item.children && item.children.length > 0) return;
     this.$router.push({ path: '/article', query: {type: item.parent, name: item.name} });
+    (this as any).$ga.event({
+      eventCategory: item.name,
+      eventAction: item.parent,
+      eventLabel: this.$route.path,
+      eventValue: item.name
+    });
   }
 
   @Watch('filterText')

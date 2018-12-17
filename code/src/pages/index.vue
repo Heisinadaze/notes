@@ -57,6 +57,12 @@ export default class Index extends Vue {
 
   private route (item: any) {
     this.$router.push({ path: '/article', query: {type: item.type, name: item.name} });
+    (this as any).$ga.event({
+      eventCategory: item.name,
+      eventAction: item.type,
+      eventLabel: this.$route.path,
+      eventValue: item.name
+    });
   }
 }
 </script>
