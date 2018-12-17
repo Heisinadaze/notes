@@ -11,6 +11,7 @@
       :data="treeList"
       :accordion="true"
       :indent="50"
+      @node-click="route"
       :props="defaultProps"
       :default-expand-all="false"
       :filter-node-method="filterNode"
@@ -36,6 +37,11 @@ export default class ArtList extends Vue {
     return this.$store.state.treeList;
   }
 
+  private route (item: any) {
+    if (item.children && item.children.length > 0) return;
+    this.$router.push({ path: '/article', query: {type: item.parent, name: item.name} });
+  }
+
   @Watch('filterText')
   private filterT (val: string) {
     (this.$refs.tree as any).filter(val);
@@ -53,10 +59,6 @@ export default class ArtList extends Vue {
 
     .el-input {
       margin-bottom: 20px;
-
-      .el-input__inner {
-        // background: $trans;
-      }
     }
 
     .el-tree {

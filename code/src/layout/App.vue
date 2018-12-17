@@ -38,7 +38,8 @@ export default class App extends Vue {
   private child (arr: any[], item: string, ind: number) {
     let res = arr.filter((i: any) => i.indexOf(`${item}/`) > -1);
     res = res.map(a => ({
-      name: a.split(`${item}/`)[1]
+      name: a.split(`${item}/`)[1],
+      parent: item
     }));
     return res;
   }
