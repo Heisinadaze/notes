@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { Vue, Component, Watch } from 'vue-property-decorator';
-import { watch } from 'fs';
+// import { watch } from 'fs';
 
 @Component
 export default class ArtList extends Vue {

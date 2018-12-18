@@ -1,8 +1,9 @@
 <template>
-  <div class="article">
+  <div class="article" ref="art">
 
     <h1 v-show="detail">{{ $route.query.name }}</h1>
-    <div v-html="detail" v-if="detail" class="content-md"></div>
+    <div v-html="detail" v-if="detail"
+      class="content-md"></div>
 
     <div v-else class="no-content tc text-bold">该文章已下架</div>
   </div>
@@ -12,8 +13,9 @@
 import { Vue, Component } from 'vue-property-decorator';
 
 @Component
-export default class Article extends Vue {
+export default class Articled extends Vue {
   private detail: any = '';
+  private contextmenu = '';
   private get list () {
     return this.$store.state.list;
   }
@@ -27,6 +29,41 @@ export default class Article extends Vue {
 
   private created () {
     this.getDetail();
+    // this.contextmenu = !this.$route.query.me ? 'return false' : '';
+    // console.log(this.contextmenu);
+  }
+
+  private mounted () {
+    const me = this.$route.query.me;
+    /**
+     * 禁用右键菜单
+     */
+    document.oncontextmenu = (event: any) => {
+      if (!me) event.returnValue = false;
+    };
+    /**
+     * 禁用选中功能
+     */
+    // document.onselectstart = (event: any) => {
+    //   if (!me) event.returnValue = false;
+    // };
+    /**
+     * 禁用复制功能
+     */
+    // document.oncopy = (event: any) => {
+    //     event.returnValue = false;
+    // };
+    /**
+     * 禁用鼠标的左右键
+     */
+    document.onmousedown = (event: any) => {
+      if (event.which === 1) { // 鼠标左键
+        if (!me) return false;
+      }
+      if (event.which === 3) { // 鼠标右键
+        if (!me) return false;
+      }
+    };
   }
 }
 </script>
@@ -45,7 +82,12 @@ export default class Article extends Vue {
     }
 
     ol {
-      list-style:lower-alpha inside;
+      // list-style:lower-alpha;
+      list-style: lower-roman;
+    }
+
+    ul > li {
+      list-style: malayalam;
     }
   }
 </style>
