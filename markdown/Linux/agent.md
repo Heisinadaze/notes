@@ -11,3 +11,5 @@ wget --timeout 3 -t 2  http://download.uhostsec.service.ucloud.cn:8090/ucloud-se
 `ps uax|grep uca`
 
 下面的字段有`uca`就行了
+
+`su name` 切换用户
