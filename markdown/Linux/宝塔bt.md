@@ -15,5 +15,8 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_
 
 ```
 /etc/init.d/mongodb start
+
+关闭
+/etc/init.d/mongodb stop
 ```
 
