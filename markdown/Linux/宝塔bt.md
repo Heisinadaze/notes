@@ -11,3 +11,9 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_
 关闭安全入口：rm -f /www/server/panel/data/admin_path.pl
 ```
 
+### 解决安装MongoDB之后，不能直接在宝塔页面成功启动
+
+```
+/etc/init.d/mongodb start
+```
+
