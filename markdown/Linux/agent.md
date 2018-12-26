@@ -22,3 +22,5 @@ wget --timeout 3 -t 2  http://download.uhostsec.service.ucloud.cn:8090/ucloud-se
 ```
 yum remove iptables
 ```
+
+[检查端口是否开通](http://tool.chinaz.com/port/)
