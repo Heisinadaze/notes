@@ -20,3 +20,18 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_
 /etc/init.d/mongodb stop
 ```
 
+
+命令
+```
+停止
+/etc/init.d/bt stop
+启动
+/etc/init.d/bt start
+重启
+/etc/init.d/bt restart
+卸载
+/etc/init.d/bt stop && chkconfig --del bt && rm -f /etc/init.d/bt && rm -rf /www/server/panel
+查看当前面板端口
+cat /www/server/panel/data/port.pl
+
+```
