@@ -60,28 +60,28 @@ http://echarts.baidu.com/examples/editor.html?c=bar3d-simplex-noise&gl=1&theme=d
 
 
 **Question 7： echart的y轴设置最小值有两种方式**
-echart的y轴设置最小值有两种方式
+
 
 1.min可以设置为特殊值‘dataMin’，此时取数据在该轴上的最小值作为最小刻度。
-'''
 
+```
 yAxis: {
 
     min: 'dataMin' // 最小值
 
 },
+```
 
-'''
 
 2.scale设置为true后，坐标刻度不会强制包含零刻度。（注意：只在数值轴中（type:'value'）中有效）
 
-'''
+```
 yAxis: {
 
     scale:true
 
 },
-'''
+```
 
 
 
