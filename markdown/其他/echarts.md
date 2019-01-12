@@ -83,6 +83,25 @@ yAxis: {
 },
 ```
 
+**Question 8： 设置折现和点的颜色**
+
+```
+        series: [
+            {
+                name:'最大值',
+                type:'line',
+                itemStyle : {  
+                  normal: {
+                    color:'#f00',  //圈圈的颜色
+                    lineStyle:{  
+                        color:'#f00'  //线的颜色
+                    }
+                  }
+                },
+                data:[6150, 6150, 6150, 6150, 6150, 6150, 6150]
+            }
+         ]
+```
 
 
 
