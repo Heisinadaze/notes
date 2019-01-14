@@ -103,6 +103,20 @@ yAxis: {
          ]
 ```
 
+**Question 9： 数据太多，设置缩放点**
+
+![echarts](http://cdn.jsan.top//echarts/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190114140115.png)
+
+```
+        yAxis: {
+        },
+        dataZoom: [{
+            startValue: '2014-06-01' // 开始的点
+        }, {
+            type: 'inside'
+        }],
+```
+
 
 
 
