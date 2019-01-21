@@ -45,7 +45,8 @@ export default class Home extends Vue {
     height: 100%;
     overflow: hidden;
     padding: 0.5 * $width;
-    background: url(../assets/images/bg1.jpg) no-repeat center $white;
+    background: url(../assets/wz/8.jpg) no-repeat center $white;
+    // background: url(../assets/images/bg1.jpg) no-repeat center $white;
     background-size: cover;
 
     .el-aside {

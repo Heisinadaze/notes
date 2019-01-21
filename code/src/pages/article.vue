@@ -3,7 +3,7 @@
 
     <h1 v-show="detail">{{ $route.query.name }}</h1>
     <div v-html="detail" v-if="detail"
-      class="content-md"></div>
+      class="content-md" v-highlightA></div>
 
     <div v-else class="no-content tc text-bold">该文章已下架</div>
   </div>

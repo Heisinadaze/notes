@@ -1,5 +1,5 @@
 <template>
-  <div class="welcome">
+  <div class="welcome" @click="goHome">
     <!-- welcome -->
 
     <!-- <p>你偷走了我的影子</p>
@@ -9,12 +9,12 @@
     <p>我都会一直想着你</p>
 
     <p class="tr cursor" @click="goHome">--- 去首页  &gt;</p> -->
-
+<!-- 
     <div class="sky">
       <div class="clouds_one"></div>
       <div class="clouds_two"></div>
       <div class="clouds_three"></div>
-    </div>
+    </div> -->
 
     <div class="titles">
       <p class="link--yaku tc">
@@ -27,7 +27,7 @@
         <span>我</span><span>都</span><span>会</span><span>一</span><span>直</span><span>想</span><span>着</span><span>你</span>
       </p>
 
-      <p class="tc go cursor" @click="goHome">去首页</p>
+      <!-- <p class="tc go cursor" @click="goHome">去首页</p> -->
     </div>
   </div>
 </template>
@@ -51,7 +51,8 @@ export default class Welcome extends Vue {
     overflow: hidden;
     line-height: 40px;
     color: #fff;
-    background: url(../assets/images/3.jpg) no-repeat center;
+    background: url(../assets/wz/8.jpg) no-repeat center;
+    // background: url(../assets/images/3.jpg) no-repeat center;
     background-size: cover;
     font-size: 24px;
 

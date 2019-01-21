@@ -74,6 +74,10 @@
     text-decoration: line-through;
   }
 
+  p > code {
+    color: #fff;
+  }
+
   // ol ol > li, ul ol > li {
   //   list-style-type: lower-roman;
   // }
@@ -107,7 +111,7 @@
     line-height: 1.7em;
     overflow: auto;
     padding: 6px 10px;
-    border-left: 5px solid #6CE26C;
+    // border-left: 5px solid #6CE26C;
   }
 
   code {

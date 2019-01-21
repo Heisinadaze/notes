@@ -25,6 +25,11 @@ import Highlight from '<path>/highlight'
 Vue.use(Highlight)
 ```
 
+**详情页**
+
+```
+<marked v-html="detail" v-highlight></marked>
+```
 
 
 
