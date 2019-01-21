@@ -56,8 +56,8 @@ self.__precacheManifest = [
     "url": "js/chunk-cf1aac48.e1af475e.js"
   },
   {
-    "revision": "3ec688a6d5c83d4d5f4f",
-    "url": "js/app.be45473a.js"
+    "revision": "5a293b18da8d11679fb9",
+    "url": "js/app.546f615e.js"
   },
   {
     "revision": "054f5a649e41fa7a12f0",
@@ -84,8 +84,8 @@ self.__precacheManifest = [
     "url": "img/cloud_three.848fcac6.png"
   },
   {
-    "revision": "747f71fd69a06df8f445e54fddaf6923",
-    "url": "img/favicon.747f71fd.png"
+    "revision": "c6d9687a1fcaa555da95b1af02181a5f",
+    "url": "img/favicon.c6d9687a.png"
   },
   {
     "revision": "2fad952a20fbbcfd1bf2ebb210dccf7a",
@@ -96,19 +96,19 @@ self.__precacheManifest = [
     "url": "fonts/element-icons.6f0a7632.ttf"
   },
   {
-    "revision": "8c6895c7d496b38d1c9e8de8e298f947",
+    "revision": "481850f3c221c13abc4a169f5953a098",
     "url": "index.html"
   },
   {
-    "revision": "e4065c2c673a6ca51695d2df09ed8d42",
-    "url": "favicon2.ico"
+    "revision": "e8f772d8226c39161366a8cbbc774aa9",
+    "url": "favicon1.ico"
   },
   {
     "revision": "747f71fd69a06df8f445e54fddaf6923",
     "url": "favicon.png"
   },
   {
-    "revision": "3ec688a6d5c83d4d5f4f",
+    "revision": "5a293b18da8d11679fb9",
     "url": "css/app.33fa8f72.css"
   }
 ];

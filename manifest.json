@@ -1,6 +1,13 @@
 {
   "name": "deteative",
   "short_name": "deteative",
+  "icons": [
+    {
+      "src": "./favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-ico"
+    }
+  ],
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
