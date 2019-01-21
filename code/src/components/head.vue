@@ -2,11 +2,16 @@
   <div class="head">
     <!-- 头部 -->
 
-    <div class="menu cursor" @click="isCollapse = !isCollapse">
+    <div class="menu cursor" @click="isCollapse = !isCollapse" v-if="!modOrCom">
       <i class="el-icon-menu"></i>
     </div>
 
-    <el-menu :default-active="$route.path" class="el-menu-vertical-demo" :collapse="isCollapse" router>
+    <el-menu
+      :default-active="$route.path"
+      class="el-menu-vertical-demo"
+      :collapse="isCollapse"
+      :mode="modOrCom ? 'horizontal' : 'vertical'"
+      router>
       <el-menu-item :index="item.path" v-for="(item, i) in list" :key="i">
         <i :class="item.icon"></i>
         <span slot="title">{{ item.name }}</span>
@@ -39,8 +44,16 @@ export default class Head extends Vue {
 
   private isCollapse = false;
 
+  private modOrCom = false;
+
   private get treeList () {
     return this.$store.state.treeList;
+  }
+
+  private created () {
+    if (document.body.clientWidth && document.body.clientWidth < 754) {
+      this.modOrCom = true;
+    }
   }
 }
 </script>
@@ -144,6 +157,17 @@ export default class Head extends Vue {
         line-height: 40px;
         color: #000;
         animation: art 20s linear infinite;
+      }
+    }
+  }
+
+  @media screen and (max-width: 754px) {
+    .head {
+      padding: 0 !important;
+
+      .el-menu--horizontal > .el-menu-item {
+        line-height: 36px;
+        height: 36px;
       }
     }
   }

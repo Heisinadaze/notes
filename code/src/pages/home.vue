@@ -59,3 +59,23 @@ export default class Home extends Vue {
     }
   }
 </style>
+
+<style lang="scss">
+  @media screen and (max-width: 754px) {
+    .home {
+      padding: 0 !important;
+
+      .type {
+        display: block;
+      }
+
+      .el-main {
+        padding: 10px 0;
+
+        .art-list > .el-input {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+</style>
