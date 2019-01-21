@@ -14,10 +14,12 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import file from '../../file.js';
+import ico from '../assets/images/favicon.png';
 
 @Component
 export default class App extends Vue {
   private file = file;
+  private ico = ico;
   private fullscreenLoading = true;
 
   private setList (file: any) {
@@ -49,11 +51,12 @@ export default class App extends Vue {
     this.$store.commit('LIST', this.file);
     this.$store.commit('TREELIST', this.setList(this.file));
 
-    const link: any = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.type = 'image/x-icon';
-    link.rel = 'shortcut icon';
-    link.href = 'http://cdn.jsan.top/favicon.ico';
-    document.getElementsByTagName('head')[0].appendChild(link);
+    // const link: any = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    // link.type = 'image/x-png';
+    // link.type = 'image/x-icon';
+    // link.rel = 'shortcut icon';
+    // link.href = this.ico;
+    // document.getElementsByTagName('head')[0].appendChild(link);
   }
 }
 </script>

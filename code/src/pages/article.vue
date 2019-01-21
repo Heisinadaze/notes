@@ -81,13 +81,8 @@ export default class Articled extends Vue {
       line-height: 112px;
     }
 
-    ol {
-      // list-style:lower-alpha;
-      list-style: lower-roman;
-    }
-
     ul > li {
-      list-style: malayalam;
+      list-style: initial;
     }
   }
 </style>
