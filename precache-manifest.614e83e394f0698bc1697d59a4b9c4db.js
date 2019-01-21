@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "9c7edc6e42925708b5fd",
-    "url": "css/chunk-vendors.eb5c12e5.css"
+    "revision": "2354141cee81e9a69d5b",
+    "url": "css/chunk-vendors.10e60680.css"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "robots.txt"
   },
   {
-    "revision": "9c7edc6e42925708b5fd",
-    "url": "js/chunk-vendors.e0f18847.js"
+    "revision": "2354141cee81e9a69d5b",
+    "url": "js/chunk-vendors.fa3a4d79.js"
   },
   {
     "revision": "054f5a649e41fa7a12f0",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "js/chunk-2b7c2472.be0587e3.js"
   },
   {
-    "revision": "549d48baaf56a0779012",
-    "url": "css/chunk-4465c901.c4a5b8dd.css"
+    "revision": "2ffe55b3d3fb78b9353a",
+    "url": "css/chunk-411cc1bc.dc93b812.css"
   },
   {
-    "revision": "549d48baaf56a0779012",
-    "url": "js/chunk-4465c901.0198ae70.js"
+    "revision": "2ffe55b3d3fb78b9353a",
+    "url": "js/chunk-411cc1bc.afc01e46.js"
   },
   {
     "revision": "55ca7e44ac1a87e5b695",
@@ -56,20 +56,20 @@ self.__precacheManifest = [
     "url": "js/chunk-cf1aac48.e1af475e.js"
   },
   {
-    "revision": "5a293b18da8d11679fb9",
-    "url": "js/app.546f615e.js"
+    "revision": "753193ee36689d345250",
+    "url": "js/app.0c64b297.js"
   },
   {
     "revision": "054f5a649e41fa7a12f0",
     "url": "js/chunk-26fcfe48.8f556e16.js"
   },
   {
-    "revision": "2dc48bbc71076701fc35ff3698075428",
-    "url": "img/8.2dc48bbc.jpg"
-  },
-  {
     "revision": "75ee6b521d43d52f1e94b4d3978115b5",
     "url": "img/404.75ee6b52.png"
+  },
+  {
+    "revision": "2dc48bbc71076701fc35ff3698075428",
+    "url": "img/8.2dc48bbc.jpg"
   },
   {
     "revision": "04462965ba09f768e47b6ea8cb065b1c",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "fonts/element-icons.6f0a7632.ttf"
   },
   {
-    "revision": "481850f3c221c13abc4a169f5953a098",
+    "revision": "a6e3f0bd97a6ea8ee792fa965da22dd2",
     "url": "index.html"
   },
   {
@@ -108,7 +108,7 @@ self.__precacheManifest = [
     "url": "favicon.png"
   },
   {
-    "revision": "5a293b18da8d11679fb9",
+    "revision": "753193ee36689d345250",
     "url": "css/app.33fa8f72.css"
   }
 ];
