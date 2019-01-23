@@ -2,9 +2,10 @@ import axios from 'axios';
 import querystring from 'querystring';
 import { error } from '@/utils/res';
 import router from '@/router/router';
+import { BASE_URL } from '@/config';
 
 const ax = axios.create({
-  baseURL: '/api'
+  baseURL: BASE_URL
 });
 
 // 拦截器
