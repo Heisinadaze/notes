@@ -120,7 +120,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-
+// import Set from 'es6-set/polyfill';
 interface Check {
   time: any[];
   type: any;
@@ -244,10 +244,20 @@ export default class Bill extends Vue {
       }
     });
   }
+  private unique (arr: number[]) {
+    arr.sort();
+    const a: any[] = [arr[0]];
+    arr.forEach((item: any) => {
+      if (item !== a[a.length - 1]) a.push(item);
+    });
+    return a;
+  }
   private sortClass () {
     const s = this.list.filter((item: any) => item.type === 2);
     const x = this.list.filter((item: any) => item.type === 1);
-    this.detail.types = [...new (Set as any)(this.list.map((item: any) => item.route))];
+    // this.detail.types = [...new (Set as any)(this.list.map((item: any) => item.route))];
+    const arr = this.list.map((item: any) => item.route);
+    this.detail.types = this.unique(arr);
     this.restaurants = this.detail.types.map(item => ({value: item}));
     const sResult = this.calcBill(s);
     const xResult = this.calcBill(x);
