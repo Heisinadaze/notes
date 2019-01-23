@@ -33,7 +33,10 @@ ax.interceptors.response.use(
     return response;
   },
   (error: any) => {
-    // ...
+    if (error.response.status === 500 || error.response.status === 404) {
+      console.log('连接失败');
+    }
+    return error.response;
   }
 );
 

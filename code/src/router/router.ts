@@ -10,6 +10,8 @@ const home = () => import('@/pages/home.vue');
 const index = () => import('@/pages/index.vue');
 const artList = () => import('@/pages/artList.vue');
 const article = () => import('@/pages/article.vue');
+const bill = () => import('@/pages/bill.vue');
+const log = () => import('@/pages/log.vue');
 const nofind = () => import('@/pages/404.vue');
 
 const routes: RouteConfig[] = [
@@ -38,6 +40,16 @@ const routes: RouteConfig[] = [
         path: '/article',
         name: '详情',
         component: article
+      },
+      {
+        path: '/bill',
+        name: '账单',
+        component: bill
+      },
+      {
+        path: '/log',
+        name: '备忘录',
+        component: log
       }
     ]
   },

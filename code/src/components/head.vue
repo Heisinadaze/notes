@@ -12,7 +12,7 @@
       :collapse="isCollapse"
       :mode="modOrCom ? 'horizontal' : 'vertical'"
       router>
-      <el-menu-item :index="item.path" v-for="(item, i) in list" :key="i">
+      <el-menu-item :index="item.path" v-for="(item, i) in list" :key="i" v-show="item.show">
         <i :class="item.icon"></i>
         <span slot="title">{{ item.name }}</span>
       </el-menu-item>
@@ -33,12 +33,26 @@ export default class Head extends Vue {
     {
       name: '首页',
       icon: 'el-icon-document',
-      path: '/index'
+      path: '/index',
+      show: 1
     },
     {
       name: '文章',
       icon: 'el-icon-document',
-      path: '/artlist'
+      path: '/artlist',
+      show: 1
+    },
+    {
+      name: '账单',
+      icon: 'el-icon-document',
+      path: '/bill',
+      show: (this.user.name && this.concat)
+    },
+    {
+      name: '备忘录',
+      icon: 'el-icon-document',
+      path: '/log',
+      show: (this.user.name && this.concat)
     }
   ];
 
@@ -48,6 +62,14 @@ export default class Head extends Vue {
 
   private get treeList () {
     return this.$store.state.treeList;
+  }
+
+  private get concat () {
+    return this.$store.state.concat;
+  }
+
+  private get user () {
+    return this.$store.state.user;
   }
 
   private created () {
@@ -164,6 +186,18 @@ export default class Head extends Vue {
   @media screen and (max-width: 754px) {
     .head {
       padding: 0 !important;
+
+      .el-menu {
+        display: flex;
+
+        .el-menu-item {
+          padding: 0;
+
+          > span {
+            padding: 0;
+          }
+        }
+      }
 
       .el-menu--horizontal > .el-menu-item {
         line-height: 36px;

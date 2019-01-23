@@ -46,11 +46,23 @@ export default class App extends Vue {
     return res;
   }
 
+  private async created () {
+    await this.$store.dispatch('concat');
+    const id1 = window.location.href.indexOf('?id=') > -1 ? window.location.href.split('?id=')[1] : '';
+    const id2 = window.location.href.indexOf('&id=') > -1 ? window.location.href.split('&id=')[1] : '';
+    const uid = this.$route.query.id || id1 || id2;
+    if (this.$store.state.concat && uid) {
+      this.$store.dispatch('getUser', {
+        id: uid
+      });
+    }
+  }
+
   private async mounted () {
     this.fullscreenLoading = false;
     this.$store.commit('LIST', this.file);
     this.$store.commit('TREELIST', this.setList(this.file));
-    this.$store.dispatch('concat');
+    // await this.$store.dispatch('concat');
 
     const link: any = document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type = 'image/x-png';

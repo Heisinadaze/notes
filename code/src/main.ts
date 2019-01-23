@@ -7,11 +7,13 @@ import VueAnalytics from 'vue-analytics/dist/vue-analytics.js';
 import './assets/scss/index.scss';
 import { success, notice } from '@/utils/res';
 import Highlight from './utils/highlight.js';
+import dayjs from 'dayjs';
 
 Vue.use(Highlight);
 
 Vue.prototype.$success = success;
 Vue.prototype.$notice = notice;
+Vue.prototype.$Date = dayjs;
 Vue.config.productionTip = false;
 
 elementUI();

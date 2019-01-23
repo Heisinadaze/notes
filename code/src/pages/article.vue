@@ -34,7 +34,7 @@ export default class Articled extends Vue {
   }
 
   private mounted () {
-    const me = this.$route.query.me;
+    const me = this.$store.state.user.name || this.$route.query.me;
     /**
      * 禁用右键菜单
      */
