@@ -17,7 +17,7 @@ ax.interceptors.request.use(
       config.method === 'delete' ||
       config.method === 'patch'
     ) {
-      config.data = querystring.stringify(config.data.site);
+      config.data = querystring.stringify(config.data);
     }
     return config;
   },

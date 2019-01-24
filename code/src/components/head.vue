@@ -1,7 +1,7 @@
 <template>
   <div class="head">
     <!-- 头部 -->
-
+<!-- {{concat}}{{user.id}} -->
     <div class="menu cursor" @click="isCollapse = !isCollapse" v-if="!modOrCom">
       <i class="el-icon-menu"></i>
     </div>

@@ -50,11 +50,14 @@ export default class App extends Vue {
     await this.$store.dispatch('concat');
     const id1 = window.location.href.indexOf('?id=') > -1 ? window.location.href.split('?id=')[1] : '';
     const id2 = window.location.href.indexOf('&id=') > -1 ? window.location.href.split('&id=')[1] : '';
+    const idl = window.localStorage.WCPSITEUSER ? JSON.parse(window.localStorage.WCPSITEUSER) : '';
     const uid = this.$route.query.id || id1 || id2;
     if (this.$store.state.concat && uid) {
       this.$store.dispatch('getUser', {
         id: uid
       });
+    } else if (idl) {
+      this.$store.commit('USER', idl);
     }
   }
 

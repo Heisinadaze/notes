@@ -198,7 +198,7 @@ export default class Bill extends Vue {
         this.$store.dispatch('bill/addBill', {
           ...this.ruleForm,
           crtime: Date.parse(new (Date as any)(this.ruleForm.time)),
-          uid: this.user._id
+          uid: this.user.id
         }).then(res => {
           if (res.code === 1) {
             this.addDialog = false;
@@ -285,7 +285,7 @@ export default class Bill extends Vue {
     this.$alert('删除？', '', {
       callback: action => {
         this.$store.dispatch('bill/delBill', {
-          uid: this.user._id,
+          uid: this.user.id,
           id: item._id
         })
         .then(res => {

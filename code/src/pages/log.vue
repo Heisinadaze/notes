@@ -56,7 +56,7 @@
         <el-col :span="2" >操作</el-col>
       </el-row>
       <el-row :gutter="20" v-for="(item, i) in list" :key="i" class="log-hover">
-        <el-col :span="4">{{ item.crtime | dateFormat('yyyy-MM-dd hh:mm') }}</el-col>
+        <el-col :span="4">{{ $Date(item.crtime).format('YYYY-MM-DD HH:mm') }}</el-col>
         <el-col :span="12">
           <p class="log-content">{{ item.name }}</p>
         </el-col>
@@ -73,9 +73,9 @@
     <section class="log-content-tel" v-loading="loading" v-show="tel">
       <ul>
         <li v-for="(item, i) in list" :key="i">
-          <p class="tel-time">{{ $Date(item.crtime).format('YYYY-MM-DD HH:mm:ss') }}</p>
           <p>{{ item.name }}</p>
           <p>{{ item.other }}</p>
+          <p class="tel-time">{{ $Date(item.crtime).format('YYYY-MM-DD HH:mm') }}</p>
         </li>
         <li v-show="!list || list.length < 1" class="tc">
           暂无数据
@@ -143,7 +143,7 @@ export default class Log extends Vue {
   }
   private getList () {
     const obj = {
-      uid: this.user._id,
+      uid: this.user.id,
       time1: 0,
       time2: 0,
       keyword: ''
@@ -175,7 +175,7 @@ export default class Log extends Vue {
     this.$alert('删除？', '', {
       callback: action => {
         this.$store.dispatch('bill/delLog', {
-          uid: this.user._id,
+          uid: this.user.id,
           id: item._id
         })
         .then(res => {
@@ -265,11 +265,16 @@ export default class Log extends Vue {
         border-bottom: 1px dashed #999;
 
         .tel-time {
-          color: #330b0b;
+          color: #666;
         }
 
         .tel-nums {
           color: red;
+        }
+
+        > p {
+          white-space: pre;
+          color: #330b0b;
         }
       }
     }
