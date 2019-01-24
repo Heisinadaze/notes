@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.3b37f77aa3e1ef022bca233c612912fc.js"
+  "precache-manifest.fbbd20bca6273cfedfe1159c26b8e19e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "deteative"});
